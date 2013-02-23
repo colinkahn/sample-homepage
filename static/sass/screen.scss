@@ -1,0 +1,512 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "susy";
+
+@include font-face('GloriolaLight', font-files('gloriola-l.woff', woff, 'gloriola-l.svg', svg, 'gloriola-l.ttf', ttf), 'gloriola-l.eot');
+@include font-face('Gloriola', font-files('gloriola.woff', woff, 'gloriola.svg', svg, 'gloriola.ttf', ttf), 'gloriola.eot');
+@include font-face('ProximaNova', font-files('proximanova.woff', woff, 'proximanova.svg', svg, 'proximanova.ttf', ttf), 'proximanova.eot');
+@include font-face('ProximaNovaBold', font-files('proximanova-b.woff', woff, 'proximanova-b.svg', svg, 'proximanova-b.ttf', ttf), 'proximanova-b.eot');
+
+
+$icon-sprite-dimensions: true;
+@import "icon/*.png";
+
+$button-sprite-dimensions: true;
+@import "button/*.png";
+
+@mixin proximanova-bold-concise($font-color: #5e6079) {
+	font-family:'ProximaNovaBold', sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	text-transform: uppercase;
+	color:$font-color;
+
+	a {
+		color:inherit;
+		text-decoration:none;
+		&:hover {
+			color:adjust-lightness($font-color, -15%);
+		}
+	}
+}
+
+body {
+	font-family:Helvetica, sans-serif;
+	padding-bottom:50px;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	position:relative;
+}
+
+input, textarea, select {
+   -webkit-appearance: none;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   -webkit-border-radius:0;
+ }
+
+.header {
+	height:80px;
+
+	.login-actions {
+		@include proximanova-bold-concise;
+
+		letter-spacing: 1px;
+		position:absolute;
+		right:30px;
+		top:10px;
+		text-align:center;
+
+		li {
+			margin:10px 0;
+			&.seperator {
+				display:none;
+			}
+		}
+	}
+
+	.logo {
+		@include icon-sprite(logo);
+		position:absolute;
+		top:25px;
+		left:20px;
+		display:block;
+
+		h1 {
+			display:none;
+		}
+	}
+
+}
+
+.hero-block {
+	height:200px;
+	background: image-url('hero.jpg') no-repeat center;
+	@include background-size(cover);
+	position:relative;
+
+	h2 {
+		font-family:"GloriolaLight", sans-serif;
+		font-size:22px;
+		font-weight: normal;
+		color:#fff;
+		text-align: center;
+		padding:0 10%;
+		position:absolute;
+		width:80%;
+		top:10px;
+		@include single-text-shadow(0px, 1px, 1px, false, #5b5b5b);
+	}
+
+	.hero-icons {
+		display:none;
+		@include icon-sprite(herocons);
+		position:absolute;
+		top:160px;
+		left:50%;
+		margin-left:-272px;
+	}
+}
+
+.social-signin, .social-signup {
+	position:absolute;
+	bottom:5px;
+	width:100%;
+	text-align:center;
+
+	.social-signin-btn, .social-signup-btn {
+		line-height:59px;
+		font-family:'ProximaNovaBold', sans-serif;
+		font-weight:normal;
+		font-size:12px;
+		text-transform: uppercase;
+		text-align:center;
+		display:inline-block;
+		margin-right:25px;
+
+		a {
+			display:block;
+			color:#fff;
+			text-decoration:none;
+		}
+
+		&.facebook {
+			@include button-sprite(facebook);
+			margin-bottom:5px;
+			a { padding-left:52px; padding-right:20px; }
+		}
+
+		&.google {
+			@include button-sprite(google);
+			a { padding-left:60px; padding-right:20px; }
+		}
+	}
+}
+
+.features {
+	$total-columns: 1;
+	$column-width: 450px;
+	$gutter-width: 60px;
+	$grid-padding: 20px;
+	$show-grid-backgrounds: true;
+
+    @include container;
+
+    @include at-breakpoint(2) {
+    	@include set-container-width;
+    }
+
+    margin:10px auto;
+	color:#5a5969;
+	font-size:14px;
+
+	.feature-screens {
+		@include span-columns(1);
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.feature-content {
+		@include span-columns(1);
+
+		p {
+			line-height:20px;
+			b { font-weight:bold; }
+			margin-top:35px;
+			margin-bottom:25px;
+		}
+
+		.feature-list {
+			line-height:12px;
+
+			li {
+				padding-left:30px;
+				position:relative;
+				margin-bottom:1em;
+			}
+
+			.checkmark {
+				@include icon-sprite(checkmark);
+				display:inline-block;
+				position:absolute;
+				left:0;
+			}
+		}
+
+
+	}
+
+
+}
+
+.footer {
+	$font-color: #868e9a;
+
+	text-align:center;
+	color:$font-color;
+	font-size:12px;
+	line-height:20px;
+
+	.copyright {
+		display:block;
+	}
+
+	.footer-nav {
+		display:inline;
+		li {
+			display:inline;
+			margin:0 .5ex;
+
+			a {
+				color:inherit;
+				text-decoration:none;
+
+				&:hover {
+					color: adjust-lightness($font-color, -15%);
+				}
+			}
+
+			&:before {
+				content:'•';
+				position:relative;
+				right:.25ex;
+			}
+			&:first-child:before {
+				display:none;
+			}
+		}
+	}
+}
+
+.modal-overlay {
+	position:fixed;
+	top:0; bottom:0; left:0; right:0;
+	z-index:2;
+	@include box-sizing(border-box);
+	padding:20px;
+	overflow-y:scroll;
+
+	.close-modal {
+		@include button-sprite(close-modal);
+		text-indent:-9999em;
+		display:block;
+		position:absolute;
+		top:10px;
+		right:10px;
+	}
+
+	.social-signup, .social-signin {
+		top: 60px;
+		text-align: right;
+		right: 0;
+		width:136px;
+
+		.more { display:none; }
+
+		.social-signin-btn, .social-signup-btn {
+			line-height:39px;
+
+			&.facebook {
+				@include button-sprite(facebook-nobrdr-small);
+				margin-bottom:5px;
+				a {
+					padding-left:47px;
+					padding-right:7px;
+				}
+			}
+
+			&.google {
+				@include button-sprite(google-nobrdr-small);
+				margin-bottom:5px;
+				a {
+					padding-left:49px;
+					padding-right:6px;
+				}
+			}
+		}
+	}
+
+	h3 {
+		font-family:"GloriolaLight", sans-serif;
+		font-size:36px;
+		color:#5a5969;
+		margin-bottom:20px;
+		padding-top:55px;
+
+		small {
+			display:block;
+			font-family:Helvetica, sans-serif;
+			font-size:13px;
+			width:110px;
+			margin: 10px 0;
+			line-height:20px;
+
+			a {
+				$font-color:#4776ef;
+				text-decoration:none;
+				color:$font-color;
+				font-weight: bold;
+				&:hover {
+					color:adjust-lightness($font-color, -15%);
+				};
+			}
+		}
+	}
+
+	label {
+		@include proximanova-bold-concise;
+		line-height:25px;
+	}
+
+	input[type=text], input[type=password] {
+		height:35px;
+		line-height:25px;
+		font-size:14px;
+		display:block;
+		border:none;
+		border-bottom:1px solid black;
+		width:100%;
+		text-indent:.5ex;
+
+		&:focus {
+			background-color:#c4eeff;
+		}
+	}
+
+	input[type=submit] {
+		display:block;
+		width:100%;
+		@include proximanova-bold-concise(#fff);
+		background:#4776ef;
+		border:none;
+		line-height:45px;
+		letter-spacing: 1px;
+		@include border-radius(3px);
+		margin-top:25px;
+		height:45px;
+	}
+
+	.modal {
+		position:relative;
+		top:-700px;
+	}
+
+}
+
+@include at-breakpoint(2) {
+
+	.header {
+		height:100px;
+
+		.logo {
+			top:40px;
+			left:40px;
+		}
+
+		.login-actions {
+			right:45px;
+			top:45px;
+			text-align:left;
+
+			li {
+				display:inline;
+				&.seperator {
+					display:inline;
+					color:#d1d2e1;
+					margin:0 16px;
+				}
+			}
+		}
+	}
+
+	.hero-block {
+		height:382px;
+
+		h2 {
+			font-size:36px;
+			top:85px;
+		}
+
+		.hero-icons {
+			display:block;
+		}
+	}
+
+	.social-signin {
+		bottom:75px;
+		li {
+			margin-bottom:0;
+		}
+	}
+
+	.features {
+		margin:70px auto;
+
+		.feature-screens {
+			@include span-columns(1, 2);
+		}
+
+		.feature-content {
+			@include span-columns(1 omega, 2);
+			.feature-list {
+				padding-left:25px;
+			}
+		}
+	}
+
+	.footer {
+		.copyright {
+			display:inline;
+		}
+
+		.footer-nav {
+			li {
+				margin:0 2ex;
+				&:before {
+					right:2.25ex;
+				}
+			}
+		}
+	}
+
+	.modal-overlay {
+		overflow:hidden;
+
+		.close-modal {
+			top:-15px;
+			right:-15px;
+		}
+
+		h3 {
+			margin-bottom:60px;
+			padding-top:0;
+
+			small {
+				width:auto;
+				display:inline;
+				margin-left:40px;
+			}
+		}
+
+		input[type=text], input[type=password] {
+			margin-bottom:28px;
+		}
+
+		.modal {
+			position:relative;
+			background:white;
+			width:660px;
+			height:470px;
+			padding:60px 80px;
+			margin: 125px auto 0;
+			border:1px solid #d3d3d3;
+
+			&.signup {
+				.social-signup, .social-signin, form {
+					float:left;
+				}
+
+				form {
+					border-right:1px dotted #666666;
+					margin-left:-1px;
+					width:41%;
+					padding-right:9%;
+				}
+
+				.social-signup, .social-signin {
+					width:41%;
+					padding-left:9%;
+					position:static;
+					text-align:left;
+
+					.more { display:inline; }
+
+					.social-signin-btn, .social-signup-btn {
+						margin-bottom:20px;
+
+						&.facebook {
+							@include button-sprite(facebook-nobrdr);
+						}
+
+						&.google {
+							@include button-sprite(google-nobrdr);
+						}
+					}
+
+					.social-signin-desc {
+						font-size: 13px;
+						line-height:16px;
+						color:#5a5969;
+					}
+				}
+			}
+		}
+	}
+}

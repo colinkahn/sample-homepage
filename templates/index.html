@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solomogram</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/screen.css') }}" />
+</head>
+<body>
+    <div class="modal-overlay" style="display:none">
+        <div class="modal signup">
+            <a href="#" class="close-modal">Close</a>
+            <h3>Sign Up <small>Already have an account? <a href="#">Sign In</a></small></h3>
+            <form>
+               <label for="signup-name">First and Last Name</label>
+                <input name="signup-name" id="signup-name" type="text">
+
+                <label for="signup-email">Email Address</label>
+                <input name="signup-email" id="signup-email" type="text">
+
+                <label for="signup-password">Password</a></label>
+                <input name="signup-password" id="signup-password" type="password">
+
+                <input type="submit" value="Create My Account" name="submit">
+            </form>
+            <ul class="social-signup">
+                <li class="facebook social-signup-btn"><a href="#">Sign up <span class="more">with Facebook</span></a></li>
+                <li class="google social-signup-btn"><a href="#">Sign up <span class="more">with Google</span></a></li>
+                <li class="more social-signin-desc">
+                    <p>
+                        Start off with familiar faces by signing in with Facebook or Google. We will never post anything to your Facebook or Google account.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <a href="/" class="logo">
+                <h1>Solomogram</h1>
+            </a>
+            <ul class="login-actions">
+                <li class="signin"><a href="#">Sign in</a></li>
+                <li class="seperator">/</li>
+                <li class="signup"><a href="#">sign up</a></li>
+            </ul>
+
+        </div>
+        <div class="hero-block">
+            <div class="inner-wrap">
+                <h2>Hyper local, crowd sourced, industry disruptor.</h2>
+                <div class="hero-icons"></div>
+                <ul class="social-signin">
+                    <li class="facebook social-signin-btn"><a href="#">Sign in with Facebook</a></li>
+                    <li class="google social-signin-btn"><a href="#">Sign in with Google</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="features">
+            <div class="feature-screens">
+                <img src="{{ url_for('static', filename='images/screens.gif') }}">
+            </div>
+            <div class="feature-content">
+                <p>Let’s face it: You need a <b>better way to check in</b> and <b>share your creative side</b> with the people who matter the most. People rave about the ability to:</p>
+                <ul class="feature-list">
+                    <li><span class="checkmark"></span> Add filters and crop pictures</li>
+                    <li><span class="checkmark"></span>Check in to dinner and check out of reality</li>
+                    <li><span class="checkmark"></span> Write reviews from a hyperlocal perspective</li>
+                    <li><span class="checkmark"></span> Rate 1 to 5 stars on everything</li>
+                    <li><span class="checkmark"></span> Push to all your favorite social networks</li>
+                    <li><span class="checkmark"></span> Discover new people just like you</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="copyright">Copyright 2012 SoLoMoGram, Inc. All Rights Reserved</span>
+            <ul class="footer-nav">
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            <ul>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='javascripts/jquery.transit.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascripts/site.js') }}"></script>
+</body>
+</html>
