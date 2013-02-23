@@ -41,6 +41,9 @@ var site = (function() {
 			signup:$('.modal.signup')
 		}
 
+		if (!$.support.transition)  {
+        	$.fn.transition = $.fn.animate;
+    	}
 
 		$e.signup_btn.click(function() {
 			show_overlay('signup')
