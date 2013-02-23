@@ -43,6 +43,7 @@ var site = (function() {
 
 		if (!$.support.transition)  {
         	$.fn.transition = $.fn.animate;
+        	$e.modal_overlay.css({background:'#fff'})
     	}
 
 		$e.signup_btn.click(function() {

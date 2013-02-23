@@ -92,9 +92,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('/static/stylesheets/fonts/proximanova-b.eot?#iefix') format('eot'), url('/static/stylesheets/fonts/proximanova-b.woff') format('woff'), url('/static/stylesheets/fonts/proximanova-b.svg') format('svg'), url('/static/stylesheets/fonts/proximanova-b.ttf') format('truetype');
 }
 
-/* line 74, icon/*.png */
+/* line 58, icon/*.png */
 .icon-sprite, .header .logo, .hero-block .hero-icons, .features .feature-content .feature-list .checkmark {
-  background: url('/static/images/icon-sf6db853279.png') no-repeat;
+  background: url('/static/images/icon-s454ca37ed1.png') no-repeat;
 }
 
 /* line 90, button/*.png */
@@ -317,7 +317,7 @@ input, textarea, select {
 }
 /* line 195, ../sass/screen.scss */
 .features .feature-content .feature-list .checkmark {
-  background-position: 0 -88px;
+  background-position: 0 -66px;
   height: 12px;
   width: 16px;
   display: inline-block;
@@ -384,52 +384,51 @@ input, textarea, select {
   background-position: 0 -273px;
   height: 29px;
   width: 29px;
-  text-indent: -9999em;
   display: block;
   position: absolute;
   top: 10px;
   right: 10px;
 }
-/* line 265, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .modal-overlay .social-signup, .modal-overlay .social-signin {
   top: 60px;
   text-align: right;
   right: 0;
   width: 136px;
 }
-/* line 271, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 .modal-overlay .social-signup .more, .modal-overlay .social-signin .more {
   display: none;
 }
-/* line 273, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .modal-overlay .social-signup .social-signin-btn, .modal-overlay .social-signup .social-signup-btn, .modal-overlay .social-signin .social-signin-btn, .modal-overlay .social-signin .social-signup-btn {
   line-height: 39px;
 }
-/* line 276, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 .modal-overlay .social-signup .social-signin-btn.facebook, .modal-overlay .social-signup .social-signup-btn.facebook, .modal-overlay .social-signin .social-signin-btn.facebook, .modal-overlay .social-signin .social-signup-btn.facebook {
   background-position: 0 -235px;
   height: 38px;
   width: 136px;
   margin-bottom: 5px;
 }
-/* line 279, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 .modal-overlay .social-signup .social-signin-btn.facebook a, .modal-overlay .social-signup .social-signup-btn.facebook a, .modal-overlay .social-signin .social-signin-btn.facebook a, .modal-overlay .social-signin .social-signup-btn.facebook a {
   padding-left: 47px;
   padding-right: 7px;
 }
-/* line 285, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 .modal-overlay .social-signup .social-signin-btn.google, .modal-overlay .social-signup .social-signup-btn.google, .modal-overlay .social-signin .social-signin-btn.google, .modal-overlay .social-signin .social-signup-btn.google {
   background-position: 0 -157px;
   height: 39px;
   width: 136px;
   margin-bottom: 5px;
 }
-/* line 288, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .modal-overlay .social-signup .social-signin-btn.google a, .modal-overlay .social-signup .social-signup-btn.google a, .modal-overlay .social-signin .social-signin-btn.google a, .modal-overlay .social-signin .social-signup-btn.google a {
   padding-left: 49px;
   padding-right: 6px;
 }
-/* line 296, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 .modal-overlay h3 {
   font-family: "GloriolaLight", sans-serif;
   font-size: 36px;
@@ -437,7 +436,7 @@ input, textarea, select {
   margin-bottom: 20px;
   padding-top: 55px;
 }
-/* line 303, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .modal-overlay h3 small {
   display: block;
   font-family: Helvetica, sans-serif;
@@ -446,17 +445,17 @@ input, textarea, select {
   margin: 10px 0;
   line-height: 20px;
 }
-/* line 311, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 .modal-overlay h3 small a {
   text-decoration: none;
   color: #4776ef;
   font-weight: bold;
 }
-/* line 316, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 .modal-overlay h3 small a:hover {
   color: #134ad7;
 }
-/* line 323, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .modal-overlay label {
   font-family: "ProximaNovaBold", sans-serif;
   font-weight: normal;
@@ -474,7 +473,7 @@ input, textarea, select {
 .modal-overlay label a:hover {
   color: #3d3e4e;
 }
-/* line 328, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 .modal-overlay input[type=text], .modal-overlay input[type=password] {
   height: 35px;
   line-height: 25px;
@@ -485,11 +484,11 @@ input, textarea, select {
   width: 100%;
   text-indent: .5ex;
 }
-/* line 338, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 .modal-overlay input[type=text]:focus, .modal-overlay input[type=password]:focus {
   background-color: #c4eeff;
 }
-/* line 343, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 .modal-overlay input[type=submit] {
   display: block;
   width: 100%;
@@ -519,121 +518,121 @@ input, textarea, select {
 .modal-overlay input[type=submit] a:hover {
   color: #d9d9d9;
 }
-/* line 356, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 .modal-overlay .modal {
   position: relative;
   top: -700px;
 }
 
 @media (min-width: 960px) {
-  /* line 365, ../sass/screen.scss */
+  /* line 364, ../sass/screen.scss */
   .header {
     height: 100px;
   }
-  /* line 368, ../sass/screen.scss */
+  /* line 367, ../sass/screen.scss */
   .header .logo {
     top: 40px;
     left: 40px;
   }
-  /* line 373, ../sass/screen.scss */
+  /* line 372, ../sass/screen.scss */
   .header .login-actions {
     right: 45px;
     top: 45px;
     text-align: left;
   }
-  /* line 378, ../sass/screen.scss */
+  /* line 377, ../sass/screen.scss */
   .header .login-actions li {
     display: inline;
   }
-  /* line 380, ../sass/screen.scss */
+  /* line 379, ../sass/screen.scss */
   .header .login-actions li.seperator {
     display: inline;
     color: #d1d2e1;
     margin: 0 16px;
   }
 
-  /* line 389, ../sass/screen.scss */
+  /* line 388, ../sass/screen.scss */
   .hero-block {
     height: 382px;
   }
-  /* line 392, ../sass/screen.scss */
+  /* line 391, ../sass/screen.scss */
   .hero-block h2 {
     font-size: 36px;
     top: 85px;
   }
-  /* line 397, ../sass/screen.scss */
+  /* line 396, ../sass/screen.scss */
   .hero-block .hero-icons {
     display: block;
   }
 
-  /* line 402, ../sass/screen.scss */
+  /* line 401, ../sass/screen.scss */
   .social-signin {
     bottom: 75px;
   }
-  /* line 404, ../sass/screen.scss */
+  /* line 403, ../sass/screen.scss */
   .social-signin li {
     margin-bottom: 0;
   }
 
-  /* line 409, ../sass/screen.scss */
+  /* line 408, ../sass/screen.scss */
   .features {
     margin: 70px auto;
   }
-  /* line 412, ../sass/screen.scss */
+  /* line 411, ../sass/screen.scss */
   .features .feature-screens {
     width: 46.875%;
     float: left;
     margin-right: 6.25%;
   }
-  /* line 416, ../sass/screen.scss */
+  /* line 415, ../sass/screen.scss */
   .features .feature-content {
     width: 46.875%;
     float: right;
     margin-right: 0;
   }
-  /* line 418, ../sass/screen.scss */
+  /* line 417, ../sass/screen.scss */
   .features .feature-content .feature-list {
     padding-left: 25px;
   }
 
-  /* line 425, ../sass/screen.scss */
+  /* line 424, ../sass/screen.scss */
   .footer .copyright {
     display: inline;
   }
-  /* line 430, ../sass/screen.scss */
+  /* line 429, ../sass/screen.scss */
   .footer .footer-nav li {
     margin: 0 2ex;
   }
-  /* line 432, ../sass/screen.scss */
+  /* line 431, ../sass/screen.scss */
   .footer .footer-nav li:before {
     right: 2.25ex;
   }
 
-  /* line 439, ../sass/screen.scss */
+  /* line 438, ../sass/screen.scss */
   .modal-overlay {
     overflow: hidden;
   }
-  /* line 442, ../sass/screen.scss */
+  /* line 441, ../sass/screen.scss */
   .modal-overlay .close-modal {
     top: -15px;
     right: -15px;
   }
-  /* line 447, ../sass/screen.scss */
+  /* line 446, ../sass/screen.scss */
   .modal-overlay h3 {
     margin-bottom: 60px;
     padding-top: 0;
   }
-  /* line 451, ../sass/screen.scss */
+  /* line 450, ../sass/screen.scss */
   .modal-overlay h3 small {
     width: auto;
     display: inline;
     margin-left: 40px;
   }
-  /* line 458, ../sass/screen.scss */
+  /* line 457, ../sass/screen.scss */
   .modal-overlay input[type=text], .modal-overlay input[type=password] {
     margin-bottom: 28px;
   }
-  /* line 462, ../sass/screen.scss */
+  /* line 461, ../sass/screen.scss */
   .modal-overlay .modal {
     position: relative;
     background: white;
@@ -643,45 +642,45 @@ input, textarea, select {
     margin: 125px auto 0;
     border: 1px solid lightgrey;
   }
-  /* line 472, ../sass/screen.scss */
+  /* line 471, ../sass/screen.scss */
   .modal-overlay .modal.signup .social-signup, .modal-overlay .modal.signup .social-signin, .modal-overlay .modal.signup form {
     float: left;
   }
-  /* line 476, ../sass/screen.scss */
+  /* line 475, ../sass/screen.scss */
   .modal-overlay .modal.signup form {
     border-right: 1px dotted #666666;
     margin-left: -1px;
     width: 41%;
     padding-right: 9%;
   }
-  /* line 483, ../sass/screen.scss */
+  /* line 482, ../sass/screen.scss */
   .modal-overlay .modal.signup .social-signup, .modal-overlay .modal.signup .social-signin {
     width: 41%;
     padding-left: 9%;
     position: static;
     text-align: left;
   }
-  /* line 489, ../sass/screen.scss */
+  /* line 488, ../sass/screen.scss */
   .modal-overlay .modal.signup .social-signup .more, .modal-overlay .modal.signup .social-signin .more {
     display: inline;
   }
-  /* line 491, ../sass/screen.scss */
+  /* line 490, ../sass/screen.scss */
   .modal-overlay .modal.signup .social-signup .social-signin-btn, .modal-overlay .modal.signup .social-signup .social-signup-btn, .modal-overlay .modal.signup .social-signin .social-signin-btn, .modal-overlay .modal.signup .social-signin .social-signup-btn {
     margin-bottom: 20px;
   }
-  /* line 494, ../sass/screen.scss */
+  /* line 493, ../sass/screen.scss */
   .modal-overlay .modal.signup .social-signup .social-signin-btn.facebook, .modal-overlay .modal.signup .social-signup .social-signup-btn.facebook, .modal-overlay .modal.signup .social-signin .social-signin-btn.facebook, .modal-overlay .modal.signup .social-signin .social-signup-btn.facebook {
     background-position: 0 -196px;
     height: 39px;
     width: 213px;
   }
-  /* line 498, ../sass/screen.scss */
+  /* line 497, ../sass/screen.scss */
   .modal-overlay .modal.signup .social-signup .social-signin-btn.google, .modal-overlay .modal.signup .social-signup .social-signup-btn.google, .modal-overlay .modal.signup .social-signin .social-signin-btn.google, .modal-overlay .modal.signup .social-signin .social-signup-btn.google {
     background-position: 0 -118px;
     height: 39px;
     width: 213px;
   }
-  /* line 503, ../sass/screen.scss */
+  /* line 502, ../sass/screen.scss */
   .modal-overlay .modal.signup .social-signup .social-signin-desc, .modal-overlay .modal.signup .social-signin .social-signin-desc {
     font-size: 13px;
     line-height: 16px;
